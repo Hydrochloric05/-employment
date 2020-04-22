@@ -1,0 +1,12 @@
+<%- include('partials/header.ejs'); %>
+<h1>購入結果</h1>
+<div class="change">
+  <h2>投入金額</h2>
+  <p class="disAmount"><%= price %>円</p>
+</div>
+<div class="remain">
+  <h2>電子マネー残金</h2>
+  <p class="disAmount"><%= amount %>円</p>
+</div>
+<p class="index_link"><a href="/">戻る</a></p>
+<%- include('partials/footer.ejs'); %>

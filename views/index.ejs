@@ -1,0 +1,60 @@
+<%- include('partials/header.ejs'); %>
+<h1>券売機</h1>
+<!-- 販売画面 -->
+<div class="ticket-display">
+  <h2 class="ticket-display_head">チケット購入</h2>
+  <div id="tickDis" class="ticket-display_content">
+    <form action="" method="POST" id="ticket_amount" class="">
+      <p>購入枚数</p>
+      <input type="number" id="ticket" value="1" min="1">枚
+      <p>お支払い方法</p>
+      <input type="radio" name="pay_type" value="money" checked>現金
+      <input type="radio" name="pay_type" value="card">電子マネー
+      <input type="submit" id="amount_submit" value="枚数決定">
+    </form>
+    <form action="" method="POST" id="money_use" class="hidden">
+      <p>購入金額:<span id="pay_price_money">0</span>円</p>
+      10円:<input type="text" id="ten_field" value="0" readonly>枚<br>
+      50円:<input type="text" id="fif_field" value="0" readonly>枚<br>
+      100円:<input type="text" id="oneHnd_field" value="0" readonly>枚<br>
+      500円:<input type="text" id="fivHnd_field" value="0" readonly>枚<br>
+      1,000円:<input type="text" id="oneThs_field" value="0" readonly>枚<br>
+      5,000円:<input type="text" id="fivThs_field" value="0" readonly>枚<br>
+      10,000円:<input type="text" id="tenThs_field" value="0" readonly>枚<br>
+      <input type="submit" id="wallet_submit" value="購入" disabled="disabled">
+    </form>
+    <form action="" method="POST" id="card_use" class="hidden">
+      <p>購入金額:<span id="pay_price_card">0</span>円</p>
+      <p>投入金額:<input type="text" id="card_field" value="0" readonly>円</p>
+      <input type="submit" id="card_submit" value="電子マネーで購入" disabled="disabled">
+    </form>
+    <button id="reload">初めからやり直す</button>
+  </div>
+</div>
+<!-- お財布 -->
+<div class="wallet hidden">
+  <h3 class="wallet_title">お財布</h3>
+  <div id="wallet_contents" class="wallet_contents">
+    <div id="money" class="wallet_contents_content hidden">
+      <button id="ten_yen" data-amount="10" type="button" class="wallet_contents_content_btn">10円</button>
+      <p class="wallet_contents_content_text">残り枚数:<span id="ten_yen-remaining">0</span></p>
+      <button id="fif_yen" data-amount="50" type="button" class="wallet_contents_content_btn">50円</button>
+      <p class="wallet_contents_content_text">残り枚数:<span id="fif_yen-remaining">0</span></p>
+      <button id="oneHnd_yen"  data-amount="100" type="button" class="wallet_contents_content_btn">100円</button>
+      <p class="wallet_contents_content_text">残り枚数:<span id="one-hnd_yen-remaining">0</span></p>
+      <button id="fivHnd_yen"  data-amount="500" type="button" class="wallet_contents_content_btn">500円</button>
+      <p class="wallet_contents_content_text">残り枚数:<span id="fiv-hnd_yen-remaining">0</span></p>
+      <button id="oneThs_yen"  data-amount="1000" type="button" class="wallet_contents_content_btn">1,000円</button>
+      <p class="wallet_contents_content_text">残り枚数:<span id="one-ths_yen-remaining">0</span></p>
+      <button id="fivThs_yen"  data-amount="5000" type="button" class="wallet_contents_content_btn">5,000円</button>
+      <p class="wallet_contents_content_text">残り枚数:<span id="fiv-ths_yen-remaining">0</span></p>
+      <button id="tenThs_yen"  data-amount="10000" type="button" class="wallet_contents_content_btn">10,000円</button>
+      <p class="wallet_contents_content_text">残り枚数:<span id="ten-ths_yen-remaining">0</span></p>
+    </div>
+    <div id="card" class="wallet_contents_content hidden">
+      <button id="elect_card" data-amount="999" type="button" class="wallet_contents_content_btn">電子マネー</button>
+      <p class="wallet_contents_content_text">残金:<span id="card-remaining">0</span>円</p>
+    </div>
+  </div>
+</div>
+<%- include('partials/footer.ejs'); %>

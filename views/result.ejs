@@ -1,0 +1,23 @@
+<%- include('partials/header.ejs'); %>
+<h1>購入結果</h1>
+<div class="change">
+  <h2>投入金種</h2>
+  <% for(let item in result) { %>
+    <p><%= result[item] %></p>
+  <% } %>
+</div>
+<div class="change">
+  <h2>釣り銭</h2>
+  <h3><%= amount %>円</h3>
+  <% for(let content in moneyType) { %>
+    <p><%= moneyType[content] %></p>
+  <% } %>
+</div>
+<div class="wallet_result">
+  <h2>お財布</h2>
+  <% for(let key in wallet) { %>
+    <p><%= wallet[key] %></p>
+  <% } %>
+</div>
+<p class="index_link"><a href="/">戻る</a></p>
+<%- include('partials/footer.ejs'); %>

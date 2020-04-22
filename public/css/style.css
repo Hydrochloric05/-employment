@@ -1,0 +1,80 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+h1 {
+	color: #000;
+	width: 80%;
+	margin: 20px auto 0;
+}
+h2 {
+	width: 80%;
+	margin: 20px auto 0;
+}
+input {
+	margin: 10px auto;
+}
+input[type="submit"] {
+	width: 160px;
+	height: 50px;
+	background: #9acd32;
+}
+button {
+	width: 80px;
+	height: 40px;
+	background: #ffd700;
+}
+
+.hidden {
+	display: none;
+}
+#tickDis {
+	border: 1px solid #000;
+	width: 80%;
+	height: auto;
+	margin: auto;
+	padding: 20px;
+	position: relative;
+}
+#pay_price_money,#pay_price_card {
+	font-size: 1.4em;
+}
+.wallet_contents_content_text {
+	margin: 0 auto 20px;
+}
+.wallet_result,.change,.remain {
+	width: 80%;
+	margin: auto;
+}
+.disAmount {
+	width: 80%;
+	height: auto;
+	margin: 10px auto 0;
+}
+.index_link {
+	width: 80%;
+	margin: auto;
+	text-align: center;
+	font-size: 1.4em;
+}
+.error {
+	width: 50%;
+	height: 100px;
+	margin: auto;
+	color: #f00;
+	border: #f00 solid 1px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 1.2em;
+}
+#reload {
+	width: 120px;
+	height: 40px;
+	color: #f0f8ff;
+	background: #4169e1;
+	position: absolute;
+	top: 10px;
+	right: 10px;
+}
